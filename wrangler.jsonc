@@ -4,11 +4,29 @@
  */
 {
 	"$schema": "node_modules/wrangler/config-schema.json",
-	"name": "railway-deployment",
+	"name": "zilang-rebuild",
 	"main": "src/index.ts",
 	"compatibility_date": "2025-07-05",
 	"observability": {
 		"enabled": true
+	},
+	"kv_namespaces": [
+		{
+			"binding": "ZILANG_REBUILD",
+			"id": "7cc21be9894f4622821d280d3dc90923"
+		}
+	],
+	"secrets_store_secrets": [
+		{
+			"binding": "GITHUB_TOKEN",
+			"store_id": "32dcb0ff1b154add9229404b0a6bed52",
+			"secret_name": "GITHUB_TOKEN"
+		}
+	],
+	"vars": {
+		"GITHUB_REPO": "escwxyz/zilang",
+		"RAILWAY_PROJECT_ID": "d73fee56-5f41-422d-9865-99a3133ae456",
+		"PAYLOAD_SECRET": "98b74189556dfaad692d3d30"
 	}
 	/**
 	 * Smart Placement
